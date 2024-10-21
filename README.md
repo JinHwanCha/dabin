@@ -2,6 +2,7 @@
 
 ## 코드 올리는 순서
 
+* vscode 창 위에 Termianl 클릭하여 new terminal 열기
 * git pull 
  - 소스 다운받기
 * git add .
