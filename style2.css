@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'SMUSnowflake';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-2@1.0/SMUSnowflake-Bold.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GabiaGosran-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-2@1.0/GabiaGosran-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {text-decoration: none; color: #fff; font-family: 'GabiaGosran-Regular';}
+p, span, em {font-family: 'GabiaGosran-Regular';}
+
+.wrap {overflow: hidden; font-size: 72px; padding: 200px 0; background-color: #000; color: #fff; transition: all 1s;}
+.wrap.on {background-color: #fff; color: #000;}
+.title {margin:400px 0 800px; font-size: 90px; text-align: center; }
+.text1 {margin-bottom: 200px;}
+.text1 .desc-wrap {display: flex;justify-content: center; align-items: flex-end; margin-bottom: 200px;}
+.text1 p {opacity: 0; transition: all 0.5s; letter-spacing: 1px;}
+.text1 p.on {opacity: 1;}
+.text1 .desc1 {font-size: 72px;}
+.text1 .desc2 {font-size: 63px;}
+.text1 .desc3 {margin-right: 20px;font-size: 54px;}
+.text1 .desc4 {font-size: 45px;}
+.text1 .desc5 {font-size: 36px;padding-left: 3px;}
+.text1 .desc6 {font-size: 31px;padding-left: 6px;}
+.text1 .desc7 {position: relative; font-size: 72px;}
+.text1 .desc7 em {visibility: hidden; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); writing-mode: vertical-lr; transition: all 1s; color: #fff; text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, /* Green glow */ 0 0 32px rgb(255, 0, 0), 0 0 42px rgb(255, 0, 0), 0 0 50px rgb(255, 0, 0), 0 0 60px rgb(255, 0, 0), 0 0 82px rgb(255, 0, 0), 0 0 92px rgb(255, 0, 0), 0 0 102px rgb(255, 0, 0), 0 0 151px rgb(255, 0, 0);}
+.text1 .desc7 .fire1 {bottom: 152%; font-size: 20px;}
+.text1 .desc7 .fire2 {left: 45%; bottom: 142%; font-size: 22px;}
+.text1 .desc7 .fire3 {bottom: 132%; font-size: 22px;}
+.text1 .desc7 .fire4 {bottom: 121%; font-size: 24px;}
+.text1 .desc7 .fire5 {bottom: 111%; font-size: 22px;}
+.text1 .desc7 .fire6 {bottom: 100%; font-size: 22px;}
+.text1 .desc7.candle em{visibility: visible;}
+.text1 .desc7, .text1 .desc8 {writing-mode: vertical-rl;}
+.text1 .desc-wrap2 span {display: inline-block;}
+.text1 .desc8 {margin-left: 30px; transition: all 2.5s; font-size: 72px; }
+.text1 .desc8 span:nth-child(1) {padding-bottom: 22px;}
+.text1 .desc8.active {transform: rotate(-25deg);}
+
+
+.text2 { margin-bottom: 180px; }
+.text2 p { transition: all 0.5s;}
+.text2 span {opacity: 0; transition: all 0.5s;}
+.text2 span.on {opacity: 1;}
+.text2 .span1 {padding-bottom: 20px;}
+.text2 .desc1 {position: relative; margin-bottom: 80px; opacity: 0; text-align: center;}
+.text2 .desc1.on {opacity: 1;}
+/* .text2 .desc1::after {display: none;} */
+.text2 .desc1.on::after {content: "";position: absolute; left: 50%; top: 50%; width: 350px; height: 150px; transform: translate(-50%, -50%); background: url("./img/soot.png") no-repeat center; background-size: 100% 100%; transition: all 0.5s; opacity: 1; filter: invert(100%);}
+.text2 .desc1.on.clean::after {opacity: 0;}
+.text2 .desc2 {display: flex; align-items: center; width: 100%; margin-bottom: 30px; writing-mode: vertical-rl; text-orientation: upright; }
+.text2 .desc3 {display: flex; align-items: center; width: 100%; margin-left: 70px;  writing-mode: vertical-rl; text-orientation: upright; }
+
+.text3 .desc1 {display: flex; justify-content: center; margin-bottom: 50px; margin-left: -250px; opacity: 0; transition: all 0.5s;}
+.text3 .desc1.on {opacity: 1;}
+.text3 .desc1.off {opacity: 1;}
+.text3 .desc1 .span1 {display: block; transition: all 0.8s;}
+.text3 .desc1 .span1.on {margin-right: 0px;}
+.text3 .desc2 { margin-bottom: 150px; opacity: 0; transition: all 0.5s; cursor: pointer; text-align: center;}
+.text3 .desc2.on {opacity: 1; }
+.text3 .desc2.through {text-decoration: line-through;transition: all 0.5s;}
+
+.text3 .desc2 span {opacity: 0; transition: all 0.5s;}
+.text3 .desc2 span.on {opacity: 1;}
+
+.text4 {display: flex; align-items: flex-end; justify-content: flex-end; opacity: 0; transition: all 0.5s;}
+.text4.on {opacity: 1;}
+.text4 .candle {position: relative; margin-right: 24px; font-size: 80px; cursor: pointer; letter-spacing: -5px;}
+.text4 .candle .margin {margin-right: -16px;}
+.text4 .candle em {visibility: hidden; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); writing-mode: vertical-lr; transition: all 1s; color: #fff; text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, /* Green glow */ 0 0 32px rgb(255, 0, 0), 0 0 42px rgb(255, 0, 0), 0 0 50px rgb(255, 0, 0), 0 0 60px rgb(255, 0, 0), 0 0 82px rgb(255, 0, 0), 0 0 92px rgb(255, 0, 0), 0 0 102px rgb(255, 0, 0), 0 0 151px rgb(255, 0, 0);}
+.text4 .candle .fire1 {bottom:210%; font-size: 20px;}
+.text4 .candle .fire2 {left: 45%; bottom: 189%; font-size: 22px;}
+.text4 .candle .fire3 {bottom: 166%; font-size: 22px;}
+.text4 .candle .fire4 {bottom: 142%; font-size: 24px;}
+.text4 .candle .fire5 {bottom: 121%; font-size: 22px;}
+.text4 .candle .fire6 {bottom: 100%; font-size: 22px;}
+.text4 .candle em{visibility: visible;}
+.text4 .your {position: relative; display: inline-block; font-size: 80px; cursor: pointer;}
+.text4 .your em {visibility: hidden; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); writing-mode: vertical-lr; transition: all 1s; color: #fff; text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, /* Green glow */ 0 0 32px rgb(255, 0, 0), 0 0 42px rgb(255, 0, 0), 0 0 50px rgb(255, 0, 0), 0 0 60px rgb(255, 0, 0), 0 0 82px rgb(255, 0, 0), 0 0 92px rgb(255, 0, 0), 0 0 102px rgb(255, 0, 0), 0 0 151px rgb(255, 0, 0);}
+.text4 .your.you em {visibility: visible;}
+.wrap.on em{color: red;}
+.text4 .your .fire1 {bottom:210%; font-size: 20px;}
+.text4 .your .fire2 {left: 45%; bottom: 189%; font-size: 22px;}
+.text4 .your .fire3 {bottom: 166%; font-size: 22px;}
+.text4 .your .fire4 {bottom: 142%; font-size: 24px;}
+.text4 .your .fire5 {bottom: 121%; font-size: 22px;}
+.text4 .your .fire6 {bottom: 100%; font-size: 22px;}
+.text4 em {visibility: visible;}
+.text4 .span2.you {position: relative; cursor: pointer;} 
+.text4 .span3, .text4 .span4 {margin-right: 18px;}
+.text4 .span6 {margin-right: 6px;}
+.text4.on .candle {position: relative;display: inline-block;}
+.text4.on .candle.on {animation: candle 5s;}
+.text4 span {opacity: 0; transition: all 0.5s;}
+.text4 span.on {opacity: 1;}
+
+@keyframes candle {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(60deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+	
+}
