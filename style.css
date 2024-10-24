@@ -59,7 +59,7 @@ a {text-decoration: none; color: #fff; font-family: 'GabiaGosran-Regular';}
 p, span, em {font-family: 'GabiaGosran-Regular';}
 
 .wrap {overflow: hidden; font-size: 90px; padding: 200px 0; background-color: #000; color: #fff; transition: all 1s; z-index: 5;}
-.wrap.on {background-color: #fff; color: #000;}
+.wrap.on {background-color: #fff; color: #000 !important;}
 .title {position: fixed;left: 0; top: 0; display: flex; justify-content: center; align-items: center; background-color: #fff; color: #000; width: 100%; height: 100%; font-size: 90px; text-align: center; z-index: 10; transition: all 1s; opacity: 1; font-family: 'GabiaGosran-Regular';}
 .title.off {opacity: 0; z-index: -1; transition: all 1s;}
 .text1 {margin-bottom: 200px; margin-left: -110px;}
