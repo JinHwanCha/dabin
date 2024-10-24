@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="wrap">
-        <!-- <h1 class="title">촛불하나 - god</h1> -->
+        <h1 class="title">촛불하나 - god</h1>
         <div class="text1">
             <div class="desc-wrap" data-aos="fade-up">
                 <p class="desc1">지</p>
@@ -157,7 +157,9 @@
                 });
             }
 
-
+            $('.title').click(function() {
+                $(this).addClass('off');
+            });
 
             // 함수 호출
             $('.wrap').click(function() {
@@ -182,9 +184,9 @@
                     $(".text2 .desc1").addClass("clean");
                 } else if (clickCount === 7) {
                     $(".text3 .desc1").addClass("on");
+                    animateRandomly();
                 } else if (clickCount === 8) {
                     index4 = 0; // 세 번째 섹션 index 초기화
-                    animateRandomly();
                     $(".text3 .desc2").addClass("on");
                     addClassWithDelay4();
                 } else if (clickCount === 9) {

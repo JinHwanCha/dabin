@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>촛불하나</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
+    <link href="./style2.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -38,39 +38,43 @@
         </div>
         <div class="text2" data-aos="fade-up">
             <p class="desc1">언제나</p>
-            <p class="desc2"><span class="span1">니</span><span class="span2">곁</span><span class="span3">에 </span></p>
-            <p class="desc3"><span class="span1">서</span><span class="span2">있</span><span class="span3">을</span><span class="span3">게</span></p>
+            <p class="desc2"><span class="span1">네</span><span class="span2">곁</span><span class="span3">에 </span><span class="span4">서</span><span class="span5">있</span><span class="span6">을</span><span class="span7">게</span></p>
+            <!-- <p class="desc3"><span class="span1">서</span><span class="span2">있</span><span class="span3">을</span><span class="span3">게</span></p> -->
         </div>
         <div class="text3">
             <p class="desc1"><span class="span1">혼자</span><span class="span2">라는 </span></p>
             <p class="desc2"><span class="span1">생</span><span class="span2">각</span><span class="span3">이 </span><span class="span4">들</span><span class="span5">지 </span><span class="span6">않</span><span class="span7">게</span></p>
         </div>
         <div class="text4">
-            <div class="candle">
-                <em class="fire fire1">ㅊ</em>
-                <em class="fire fire2">ㅊㅂ</em>
-                <em class="fire fire3">ㅊㅂㅎㄴ</em>
-                <em class="fire fire4">ㅊㅂㅎㄴ</em>
-                <em class="fire fire5">ㅊㅂㅎㄴ</em>
-                <em class="fire fire6">ㅊㅂ</em>
-                <span class="span1 margin">내</span>
-                <span class="span1">가</span>
+            <div class="text4-wrap left">
+                <div class="candle">
+                    <em class="fire fire1">ㅊ</em>
+                    <em class="fire fire2">ㅊㅂ</em>
+                    <em class="fire fire3">ㅊㅂㅎㄴ</em>
+                    <em class="fire fire4">ㅊㅂㅎㄴ</em>
+                    <em class="fire fire5">ㅊㅂㅎㄴ</em>
+                    <em class="fire fire6">ㅊㅂ</em>
+                    <span class="span1 margin">내</span>
+                    <span class="span1">가</span>
+                </div>
+                <div class="your">
+                    <em class="fire fire1">ㅊ</em>
+                    <em class="fire fire2">ㅊㅂ</em>
+                    <em class="fire fire3">ㅊㅂㅎㄴ</em>
+                    <em class="fire fire4">ㅊㅂㅎㄴ</em>
+                    <em class="fire fire5">ㅊㅂㅎㄴ</em>
+                    <em class="fire fire6">ㅊㅂ</em>
+                    <span class="span2"> 너</span>
+                </div>
+                <span class="span3">의 </span>
             </div>
-            <div class="your">
-                <em class="fire fire1">ㅊ</em>
-                <em class="fire fire2">ㅊㅂ</em>
-                <em class="fire fire3">ㅊㅂㅎㄴ</em>
-                <em class="fire fire4">ㅊㅂㅎㄴ</em>
-                <em class="fire fire5">ㅊㅂㅎㄴ</em>
-                <em class="fire fire6">ㅊㅂ</em>
-                <span class="span2"> 너</span>
+            <div class="text4-wrap">
+                <span class="span4"> 손 </span>
+                <span class="span5">잡</span>
+                <span class="span6">아</span>
+                <span class="span7">줄</span>
+                <span class="span8">게</span>
             </div>
-            <span class="span3">의 </span>
-            <span class="span4"> 손 </span>
-            <span class="span5">잡</span>
-            <span class="span6">아</span>
-            <span class="span7">줄</span>
-            <span class="span8">게</span>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -149,9 +153,9 @@
 
                 // span1 요소를 랜덤한 위치로 이동시키기
                 gsap.to(span1, {
-                    x: (randomX - 770) / 2,
-                    y: (randomY - 700) / 2,
-                    duration: 0.5, // 0.5초 동안 애니메이션
+                    x: (randomX - 1000),
+                    y: (randomY - 650),
+                    duration: 0.25, // 0.5초 동안 애니메이션
                     ease: "power1.inOut", // 부드러운 애니메이션 효과
                     onComplete: animateRandomly // 애니메이션이 끝나면 다시 호출
                 });
@@ -159,6 +163,7 @@
 
             $('.title').click(function() {
                 $(this).addClass('off');
+                
             });
 
 
@@ -186,9 +191,9 @@
                     $(".text2 .desc1").addClass("clean");
                 } else if (clickCount === 7) {
                     $(".text3 .desc1").addClass("on");
+                    animateRandomly();
                 } else if (clickCount === 8) {
                     index4 = 0; // 세 번째 섹션 index 초기화
-                    animateRandomly();
                     $(".text3 .desc2").addClass("on");
                     addClassWithDelay4();
                 } else if (clickCount === 9) {

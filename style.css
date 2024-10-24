@@ -104,18 +104,18 @@ p, span, em {font-family: 'GabiaGosran-Regular';}
 .text2 .desc2 {margin-left: 770px; margin-bottom: 30px; writing-mode: vertical-rl; text-orientation: upright; }
 .text2 .desc3 {margin-left: 820px; writing-mode: vertical-rl; text-orientation: upright; }
 
-.text3 .desc1 {display: flex; margin-bottom: 50px; margin-left: 845px; opacity: 0; transition: all 0.5s;}
+.text3 .desc1 {display: flex; margin-bottom: 170px; margin-left: 845px; opacity: 0; transition: all 0.5s;}
 .text3 .desc1.on {opacity: 1;}
 .text3 .desc1.off {opacity: 1;}
 .text3 .desc1 .span1 {display: block; transition: all 0.8s;}
 .text3 .desc1 .span1.on {margin-right: 0px;}
-.text3 .desc2 {margin-left: 1063px; margin-bottom: 150px; opacity: 0; transition: all 0.5s; cursor: pointer;}
+.text3 .desc2 {margin-left: 1143px; margin-bottom: 650px; opacity: 0; transition: all 0.5s; cursor: pointer;}
 .text3 .desc2.on {opacity: 1;}
 
 .text3 .desc2 span {opacity: 0; transition: all 0.5s;}
 .text3 .desc2 span.on {opacity: 1;}
 
-.text4 {display: flex; align-items: flex-end; margin-left: 1063px; opacity: 0; transition: all 0.5s;}
+.text4 {display: flex; align-items: flex-end; margin-left: 1143px; opacity: 0; transition: all 0.5s;}
 .text4.on {opacity: 1;}
 .text4 .candle {position: relative; margin-right: 24px; font-size: 80px; cursor: pointer; letter-spacing: -5px;}
 .text4 .candle .margin {margin-right: -16px;}
