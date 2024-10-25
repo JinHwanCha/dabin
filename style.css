@@ -100,7 +100,8 @@ p, span, em {font-family: 'GabiaGosran-Regular';}
 /* .text2 .desc1::after {display: none;} */
 /* .text2 .desc1.on::after {content: "";position: absolute; left: 50%; top: 50%; width: 350px; height: 150px; transform: translate(-50%, -50%); background: url("./img/soot.png") no-repeat center; background-size: 100% 100%; transition: all 0.5s; opacity: 1; filter: invert(100%);} */
 .text2 .desc1.on.clean {filter: blur(0);}
-.text2 .desc2 {display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 30px; }
+.text2 .desc2 {display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 30px; filter: blur(10px);}
+.text2 .desc2.clean {filter: blur(0);}
 .text2 .desc2 span {font-size: 100px;}
 .text2 .desc2 .span1 {margin-right: 30px;}
 .text2 .desc2 .span3 {margin-right: 60px;}
