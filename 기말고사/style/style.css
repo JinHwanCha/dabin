@@ -1,7 +1,7 @@
 .list {display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; width: 1000px;}
 .item {width: calc((100% - 30px)/4); border-radius: 10px; overflow: hidden;}
-.item a {display: block; padding: 20px;}
-.title-mbti {font-size: 24px; font-weight: bold; margin-bottom: 16px;}
+.item a {display: flex; justify-content: center; align-items: center; padding: 30px;}
+.title-mbti {font-size: 40px; font-weight: bold;}
 .item1 {background-color: #e2e4d7;}
 .item2 {background-color: #bce2e3;}
 .item3 {background-color: #f9d4cc;}
