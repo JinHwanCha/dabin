@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>촛불하나</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body>
+    <h1 class="title">촛불하나 - god</h1>
+    <div class="wrap">
+        <div class="text1">
+            <div class="desc-wrap" data-aos="fade-up">
+                <p class="desc1">지</p>
+                <p class="desc2">치</p>
+                <p class="desc3">고 </p>
+                <p class="desc4">힘</p>
+                <p class="desc5">들 </p>
+                <p class="desc6">땐 </p>
+            </div>
+            <div class="desc-wrap desc-wrap2" data-aos="fade-up">
+                <p class="desc7">
+                    <em class="fire fire1">ㅊ</em>
+                    <em class="fire fire2">ㅊㅂ</em>
+                    <em class="fire fire3">ㅊㅂㅎㄴ</em>
+                    <em class="fire fire4">ㅊㅂㅎㄴ</em>
+                    <em class="fire fire5">ㅊㅂㅎㄴ</em>
+                    <em class="fire fire6">ㅊㅂ</em>
+                    <span>내</span>
+                    <span>게</span>
+                </p>
+                <p class="desc8"><span>기</span><span>대</span></p>
+            </div>
+        </div>
+        <div class="text2" data-aos="fade-up">
+            <p class="desc1">언제나</p>
+            <p class="desc2"><span class="span1">니</span><span class="span2">곁</span><span class="span3">에 </span></p>
+            <p class="desc3"><span class="span1">서</span><span class="span2">있</span><span class="span3">을</span><span class="span3">게</span></p>
+        </div>
+        <div class="text3">
+            <p class="desc1"><span class="span1">혼자</span><span class="span2">라는 </span></p>
+            <p class="desc2"><span class="span1">생</span><span class="span2">각</span><span class="span3">이 </span><span class="span4">들</span><span class="span5">지 </span><span class="span6">않</span><span class="span7">게</span></p>
+        </div>
+        <div class="text4">
+            <div class="candle">
+                <em class="fire fire1">ㅊ</em>
+                <em class="fire fire2">ㅊㅂ</em>
+                <em class="fire fire3">ㅊㅂㅎㄴ</em>
+                <em class="fire fire4">ㅊㅂㅎㄴ</em>
+                <em class="fire fire5">ㅊㅂㅎㄴ</em>
+                <em class="fire fire6">ㅊㅂ</em>
+                <span class="span1 margin">내</span>
+                <span class="span1">가</span>
+            </div>
+            <div class="your">
+                <em class="fire fire1">ㅊ</em>
+                <em class="fire fire2">ㅊㅂ</em>
+                <em class="fire fire3">ㅊㅂㅎㄴ</em>
+                <em class="fire fire4">ㅊㅂㅎㄴ</em>
+                <em class="fire fire5">ㅊㅂㅎㄴ</em>
+                <em class="fire fire6">ㅊㅂ</em>
+                <span class="span2"> 너</span>
+            </div>
+            <span class="span3">의 </span>
+            <span class="span4"> 손 </span>
+            <span class="span5">잡</span>
+            <span class="span6">아</span>
+            <span class="span7">줄</span>
+            <span class="span8">게</span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+        $(function() {
+            const paragraphs = $('.text1 p');
+            const paragraphs2 = $('.text2 .desc2 span');
+            const paragraphs3 = $('.text2 .desc3 span');
+            const paragraphs4 = $('.text3 .desc2 span');
+            const paragraphs5 = $('.text4 span');
+            let index1 = 0;
+            let index2 = 0;
+            let index3 = 0;
+            let index4 = 0;
+            let index5 = 0;
+            let clickCount = 0;
+    
+            // 0.5초마다 클래스를 추가하는 함수
+            function addClassWithDelay1() {
+                if ($('.text1 .desc-wrap').hasClass('aos-animate')) {
+                    if (index1 < paragraphs.length) {
+                        $(paragraphs[index1]).addClass('on');
+                        index1++;
+                        setTimeout(addClassWithDelay1, 500); // 0.5초 후에 다음 p 태그에 추가
+                    }
+                } else {
+                    setTimeout(addClassWithDelay1, 100); // AOS 애니메이션이 시작되지 않으면 재호출
+                }
+            }
+    
+            function addClassWithDelay2() {
+                if (index2 < paragraphs2.length) {
+                    $(paragraphs2[index2]).addClass('on');
+                    index2++;
+                    setTimeout(addClassWithDelay2, 500);
+                }
+            }
+    
+            function addClassWithDelay3() {
+                if (index3 < paragraphs3.length) {
+                    $(paragraphs3[index3]).addClass('on');
+                    index3++;
+                    setTimeout(addClassWithDelay3, 500);
+                }
+            }
+            function addClassWithDelay4() {
+                if (index4 < paragraphs4.length) {
+                    $(paragraphs4[index4]).addClass('on');
+                    index4++;
+                    setTimeout(addClassWithDelay4, 500);
+                }
+            }
+            function addClassWithDelay5() {
+                if (index5 < paragraphs5.length) {
+                    $(paragraphs5[index5]).addClass('on');
+                    index5++;
+                    setTimeout(addClassWithDelay5, 500);
+                }
+            }
+    
+
+            function animateRandomly() {
+                // 화면의 너비와 높이 값 가져오기
+                var windowWidth = $(window).width();
+                var windowHeight = $(window).height();
+
+                // span1 요소의 크기 가져오기
+                var span1 = $(".text3 .desc1 .span1");
+                var span1Width = span1.outerWidth();
+                var span1Height = span1.outerHeight() / 2;
+
+                // 랜덤 위치 설정 (제한 범위)
+                var randomX = Math.random() * (windowWidth - span1Width); // X축 랜덤 좌표
+                var randomY = Math.random() * (windowHeight - span1Height); // Y축 랜덤 좌표
+
+                // span1 요소를 랜덤한 위치로 이동시키기
+                gsap.to(span1, {
+                    x: (randomX - 770) / 2,
+                    y: (randomY - 700) / 2,
+                    duration: 0.5, // 0.5초 동안 애니메이션
+                    ease: "power1.inOut", // 부드러운 애니메이션 효과
+                    onComplete: animateRandomly // 애니메이션이 끝나면 다시 호출
+                });
+            }
+
+            $('.title').click(function() {
+                $(this).addClass('off');
+            });
+
+
+
+            // 함수 호출
+            $('.wrap').click(function() {
+                clickCount++;
+                if (clickCount === 1) {
+                    index1 = 0; // 클릭할 때마다 index 초기화
+                    addClassWithDelay1(); // 첫 번째 섹션의 애니메이션 시작
+                } else if (clickCount === 2) {
+                    $(".text1 .desc8").addClass("active");
+                    setTimeout(function() {
+                        $(".text1 .desc7").addClass("candle");
+                    }, 2000);
+                } else if (clickCount === 3) {
+                    $(".text2 .desc1").addClass("on");
+                } else if (clickCount === 4) {
+                    index2 = 0; // 두 번째 섹션 index 초기화
+                    addClassWithDelay2(); // 두 번째 섹션의 span 애니메이션 시작
+                } else if (clickCount === 5) {
+                    index3 = 0; // 세 번째 섹션 index 초기화
+                    addClassWithDelay3(); // 세 번째 섹션의 span 애니메이션 시작
+                } else if (clickCount === 6) {
+                    $(".text2 .desc1").addClass("clean");
+                } else if (clickCount === 7) {
+                    $(".text3 .desc1").addClass("on");
+                } else if (clickCount === 8) {
+                    index4 = 0; // 세 번째 섹션 index 초기화
+                    animateRandomly();
+                    $(".text3 .desc2").addClass("on");
+                    addClassWithDelay4();
+                } else if (clickCount === 9) {
+                    index5 = 0; // 세 번째 섹션 index 초기화
+                    addClassWithDelay5();
+                    $(".text4").addClass("on");
+                }
+            });
+
+            // .text4 a.span1을 클릭했을 때 span1 원위치로 돌아가게 하기
+            $('.text3 .desc2').click(function(e) {
+                e.preventDefault(); // 링크 기본 동작 방지
+                e.stopPropagation(); // 이벤트 버블링 차단
+
+                var span1 = $(".text3 .desc1 .span1");
+
+                // 현재 진행 중인 GSAP 애니메이션을 중지
+                gsap.killTweensOf(span1);
+
+                // span1을 원래 위치로 되돌리기 (초기 상태로 설정)
+                gsap.set(span1, {
+                    x: 0,
+                    y: 0
+                });
+                $(".text3 .desc1").addClass("off");
+            });
+            $('.text4 .candle').click(function(e) {
+                $(this).addClass("on");
+
+                setTimeout(() => {
+                    $('.text4 .your').addClass("you");
+                    $('.text4 .span2').addClass("you");
+                }, 2500);
+            });
+
+            $('.text4').on('click', '.you', function(e) {
+                $('.wrap').addClass("on");
+            });
+        });
+
+        
+    </script>
+    
+
+    
+</body>
+</html>
