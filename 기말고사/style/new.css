@@ -1,0 +1,9 @@
+.new .title {position: relative; width: 50vw; height: 50vh; font-size: 6vw; border-radius: 50%;  overflow: hidden; z-index: 2;}
+.new .title.border {border: 4px solid #000;}
+.click {display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;}
+.list {position: fixed; left: 0; top: 0; width: 100%; height: 100%;}
+li {position: absolute; font-size: 2vw;}
+li:nth-child(1) {left: 15%; top: 10%;}
+li:nth-child(2) {right: 15%; top: 15%;}
+li:nth-child(3) {left: 6%; top: 85%;}
+li:nth-child(4) {right: 7%; top: 75%;}
