@@ -40,4 +40,14 @@ $(document).ready(function() {
         });
         $('.list').html(listHtml);  // .list에 동적으로 추가된 항목들
     }
+    
+    // .title .click 요소에서 텍스트를 가져옵니다
+    var mbtiType = $('.title .click').text().toLowerCase(); // 예: 'ISTJ' -> 'istj'
+
+    // .click 요소의 href 속성을 동적으로 변경
+    var newHref = '../find/find.html'; // 예: '../find/istj_find.html'
+    // var newHref = '../find/' + mbtiType + '_find.html'; // 예: '../find/istj_find.html'
+
+    // href 속성 업데이트
+    $('.title .click').attr('href', newHref);
 });

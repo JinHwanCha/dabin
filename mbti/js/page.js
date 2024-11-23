@@ -159,4 +159,12 @@ $(document).ready(function() {
         // 애니메이션 시작
         startRandomMovement();
     });
+
+
+    $('.title .click').click(function (e) {
+        e.preventDefault(); // 기본 동작 방지
+        var mbtiType = $(this).text().trim(); // .click 텍스트 가져오기 (예: 'ISFP')
+        localStorage.setItem('mbtiType', mbtiType); // 로컬 저장소에 저장
+        window.location.href = $(this).attr('href'); // 클릭한 링크로 이동
+    });
 });
