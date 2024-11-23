@@ -1,9 +1,0 @@
-.page .title {position: relative; width: 50vw; height: 50vh; font-size: 6vw; border-radius: 50%; border: 4px solid #000; overflow: hidden; z-index: 2;}
-.click {display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;}
-.list {position: fixed; left: 0; top: 0; width: 100%; height: 100%;}
-.item {position: absolute; font-size: 2vw;}
-.item1 {left: 15%; top: 10%;}
-.item2 {right: 15%; top: 15%;}
-.item3 {left: 6%; top: 44%;}
-.item4 {right: 7%; top: 50%;}
-.item5 {left: 40%; top: 85%;}
