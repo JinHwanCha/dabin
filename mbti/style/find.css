@@ -1,0 +1,8 @@
+.find {flex-direction: column;}
+.question {padding: 40px; font-size: 40px;border: 1px solid #000;}
+.textbox {display: flex;}
+textarea {
+    width: 100%;
+    font-size: 30px;
+}
+#inputBtn {font-size: 30px;white-space: nowrap;}
