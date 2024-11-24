@@ -21,7 +21,7 @@ $(document).ready(function () {
 
         // 동적으로 페이지 URL을 생성하여 이동
         if (mbtiType) {
-            var newPage = "../new/new.html"; // 예: "../new/new_isfp.html"
+            var newPage = "../new/new.html"; // 예: "../new/new.html"
             window.location.href = newPage; // 새 페이지로 이동
         } else {
             alert("MBTI 값이 없습니다."); // MBTI 값이 없을 경우 경고
