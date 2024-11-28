@@ -89,6 +89,7 @@ $(document).ready(function () {
             resetItems(); // .item들이 제자리로 돌아가도록 설정
             stopItems(); // 모든 .item을 제자리로 이동
             isTitleDestroyed = true; // 더 이상 크기 조정을 하지 않도록 설정
+            applySentences(); // 저장된 문장 적용
         } else {
             gsap.to(title, {
                 width: titleWidth + 'px',
@@ -120,6 +121,27 @@ $(document).ready(function () {
                     stopItems(); // 모든 .item이 제자리로 돌아가면 애니메이션을 멈추도록
                 }
             });
+        });
+    }
+    
+    // 저장된 문장을 적용하는 함수
+    function applySentences() {
+        const sentences = JSON.parse(localStorage.getItem('sentences')) || [];
+
+        $('#resultList .item').each(function (index) {
+            if (sentences[index]) {
+                const $this = $(this);
+
+                // 텍스트 부드럽게 대체
+                gsap.to($this, {
+                    duration: 0.3,
+                    opacity: 0,
+                    onComplete: () => {
+                        $this.text(sentences[index]);
+                        gsap.to($this, { duration: 0.3, opacity: 1 });
+                    },
+                });
+            }
         });
     }
 
