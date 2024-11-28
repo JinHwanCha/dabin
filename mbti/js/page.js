@@ -58,22 +58,6 @@ $(document).ready(function() {
         });
     }
 
-    // 원래 자리로 돌아가는 함수
-    function returnToOriginalPosition(item, originalX, originalY, speed) {
-        // 원래 위치로 돌아가는 애니메이션
-        gsap.to(item, {
-            duration: 0.5, // 복귀 시간
-            x: originalX - item.offsetLeft, // 원래 위치와 현재 위치의 차이만큼 이동
-            y: originalY - item.offsetTop, // 원래 위치와 현재 위치의 차이만큼 이동
-            onComplete: () => {
-                if (!isTitleDestroyed) {
-                    speed += speedIncrease; // 속도 증가
-                    moveItemToClosestEdge(item, 0, speed); // 바로 다시 출발 (속도 증가)
-                }
-            },
-        });
-    }
-
     // 충돌 확인 함수
     function checkCollision(item, speed) {
         const itemRect = item.getBoundingClientRect();
@@ -99,16 +83,17 @@ $(document).ready(function() {
                 duration: 0.5,
                 width: titleWidth + 'px',
                 height: titleHeight + 'px',
-                onComplete: () => {
-                    // 크기가 최소값 이하일 때
-                    if (titleWidth <= minSize && titleHeight <= minSize) {
-                        destroyTitleBorder(); // 테두리 제거
-                        stopItems(); // 모든 .item을 제자리로 이동
-                        resetItems(); // .item들이 제자리로 돌아가도록 설정
-                    }
-                }
             });
+
+            // 충돌 시 속도 증가
+            baseSpeed += speedIncrease;
+
+            if (titleWidth <= minSize && titleHeight <= minSize) {
+                destroyTitleBorder(); // 테두리 제거
+                $('.title').addClass('red');
+            }
         }
+        
     }
 
     // .title의 테두리 제거 함수
@@ -117,32 +102,7 @@ $(document).ready(function() {
             duration: 0.5,
             border: "0px solid transparent",
         });
-        isTitleDestroyed = true; // 테두리 제거 확인
-    }
-
-    // .item들이 제자리로 돌아가는 함수
-    function resetItems() {
-        items.forEach((item) => {
-            gsap.to(item, {
-                duration: 1,
-                x: 0,
-                y: 0,
-                onComplete: () => {
-                    stopItems(); // 모든 .item이 제자리로 돌아가면 애니메이션을 멈추도록
-                }
-            });
-        });
-    }
-
-    // .item들이 제자리로 멈추도록 하는 함수
-    function stopItems() {
-        items.forEach((item) => {
-            gsap.to(item, {
-                duration: 0.5,
-                x: 0,
-                y: 0,
-            });
-        });
+        // isTitleDestroyed = true; // 테두리 제거 확인
     }
 
     // .item 애니메이션 시작
