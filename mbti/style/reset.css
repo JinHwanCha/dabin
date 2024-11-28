@@ -1,15 +1,30 @@
+
 @font-face {
-    font-family: 'SMUSnowflake';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-2@1.0/SMUSnowflake-Bold.woff2') format('woff2');
+    font-family: 'paper-R';
     font-weight: 400;
     font-style: normal;
+    src: url('../font/Paperlogy/Paperlogy-4Regular.eot');
+    src: url('../font/Paperlogy/Paperlogy-4Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Paperlogy/Paperlogy-4Regular.woff2') format('woff2'),
+        url('../font/Paperlogy/Paperlogy-4Regular.woff') format('woff'),
+        url('../font/Paperlogy/Paperlogy-4Regular.ttf') format("truetype");
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'GabiaGosran-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-2@1.0/GabiaGosran-Regular.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'plus-R';
+    font-weight: 400;
     font-style: normal;
+    src: url('../font/Moneygraphy-Pixel.eot');
+    src: url('../font/Moneygraphy-Pixel.eot?#iefix') format('embedded-opentype'),
+        url('../font/Moneygraphy-Pixel.woff2') format('woff2'),
+        url('../font/Moneygraphy-Pixel.woff') format('woff'),
+        url('../font/Moneygraphy-Pixel.ttf') format("truetype");
+    font-display: swap;
+}
+
+* {
+    font-family: 'paper-R';
 }
 
 html, body, div, span, applet, object, iframe,
@@ -29,7 +44,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: 'paper-R';
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -64,7 +79,9 @@ body.fade-in {
 body.fade-out {
     opacity: 0;
 }
-a {text-decoration: none; color: #000; cursor: pointer;}
+a {font-family: 'paper-R';text-decoration: none; color: #000; cursor: pointer;}
 
 .wrap {display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;}
 .title {font-size: 10vw;}
+
+.plus {font-family: 'plus-R';}
