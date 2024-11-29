@@ -90,7 +90,8 @@ $(document).ready(function () {
             stopItems(); // 모든 .item을 제자리로 이동
             isTitleDestroyed = true; // 더 이상 크기 조정을 하지 않도록 설정
             applySentences(); // 저장된 문장 적용
-            $('.item').addClass('plus');
+            $('.item').removeClass('plus');
+            $('.title').removeClass('plus');
         } else {
             gsap.to(title, {
                 width: titleWidth + 'px',

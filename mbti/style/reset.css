@@ -84,4 +84,4 @@ a {font-family: 'paper-R';text-decoration: none; color: #000; cursor: pointer;}
 .wrap {display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;}
 .title {font-size: 10vw;}
 
-.plus {font-family: 'plus-R';}
+.plus, .plus a {color: red;}

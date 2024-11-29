@@ -37,7 +37,7 @@ $(document).ready(function () {
         if (mbtiType && items[mbtiType.toLowerCase()]) {
             // MBTI 데이터 추가
             items[mbtiType.toLowerCase()].forEach(function (item, index) {
-                listHtml += '<li class="item item' + (index + 1) + '">' + item + '</li>';
+                listHtml += '<li class="item plus item' + (index + 1) + '">' + item + '</li>';
             });
         } else {
             listHtml += '<li class="item">MBTI 정보를 불러올 수 없습니다.</li>';
