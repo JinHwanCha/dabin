@@ -3,7 +3,7 @@ $(document).ready(function () {
     var mbtiType = localStorage.getItem('mbtiType'); // 로컬 저장소에서 MBTI 값 가져오기
 
     if (mbtiType) {
-        $('.question .mbti').text('(' + mbtiType + ')'); // 예: '(ISFP)'
+        $('.question .mbti').text('(' + mbtiType.toLowerCase() + ')'); // 예: '(ISFP)'
     } else {
         $('.question .mbti').text('(Unknown)'); // 값이 없을 경우 기본값
     }

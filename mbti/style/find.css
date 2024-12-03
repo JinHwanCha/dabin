@@ -1,8 +1,11 @@
+.find-box {border: 1px solid #000;}
 .find {flex-direction: column;}
-.question {padding: 40px; font-size: 40px;border: 1px solid #000;}
+.question {padding: 30px 60px; font-size: 48px;border: 1px solid #000; letter-spacing: 1px; line-height: 1.35; box-sizing: border-box;}
 .textbox {display: flex;}
 textarea {
     width: 100%;
-    font-size: 30px;
+    padding: 30px 60px;
+    font-size: 40px;
+    line-height: 1.2;
 }
-#inputBtn {font-size: 30px;white-space: nowrap;}
+#inputBtn {padding: 0 30px; font-size: 40px;white-space: nowrap;}

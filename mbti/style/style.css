@@ -1,6 +1,6 @@
-.list {display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; width: 1000px;}
+.list {display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; width: 1240px;}
 .item {width: calc((100% - 30px)/4); border-radius: 10px; overflow: hidden;}
-.item a {display: flex; justify-content: center; align-items: center; padding: 30px;}
+.item a {display: flex; justify-content: center; align-items: center; padding: 50px;}
 .title-mbti {font-size: 40px; font-weight: bold;}
 .item1 {background-color: #e2e4d7;}
 .item2 {background-color: #bce2e3;}
